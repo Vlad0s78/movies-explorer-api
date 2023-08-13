@@ -1,7 +1,8 @@
 const allowedCors = [
+  'http://api.filmhub.nomoreparties.co',
   'https://api.filmhub.nomoreparties.co',
   'http://localhost:3000',
-  'http://localhost:3001',
+  'https://localhost:3000',
 ];
 
 const cors = (req, res, next) => {
