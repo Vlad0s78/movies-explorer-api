@@ -1,0 +1,9 @@
+const { SERVER_ERROR } = require('../utils/constants');
+
+const errorMiddleware = (err, req, res, next) => {
+  const { statusCode = SERVER_ERROR, message } = err;
+  res.status(statusCode).send({ message: statusCode === SERVER_ERROR ? 'На сервере произошла ошибка' : message });
+  next();
+};
+
+module.exports = errorMiddleware;
